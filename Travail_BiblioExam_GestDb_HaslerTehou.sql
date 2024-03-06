@@ -159,9 +159,6 @@ SELECT * FROM derniere_adresse();
 --6. Créer une fonction 'calcul_prix_emprunt' qui retourne le prix à payer
 -- formule = (date retour - date emprunt + 1)  *  2 * ratio etat exemplaire date emprunt + 1 euro pénalité si état retour est moins bon que état emprunt
 
--- afficher dans un tableau le bookcode, titre, declasse, date_emprunt, date_retour, etat_emprunt, etat_retour, prix_emprunt
--- pour chaque emprunt enregistré dans la table emprunte
-
 -- Création de la fonction 'calcul_prix_emprunt'
 
 CREATE OR REPLACE FUNCTION calcul_prix_emprunt()
@@ -195,7 +192,6 @@ SELECT * FROM calcul_prix_emprunt();
 
 
 -- 7. Créer un trigger 'before_emprunt'
--- Vérification qu'il y a bien un exemplaire disponible pour le livre
 
 -- Création du trigger 'before_emprunt'
 
@@ -228,7 +224,6 @@ INSERT INTO emprunte(id_client, id_exemplaire, date_emprunt, date_retour, etat_e
 VALUES (1, 1, '2021-01-01', '2021-01-15', 1, 1);
 
 -- 8. Créer un trigger 'after_retour_emprunt'
--- Modification de l'état de l'exemplaire si nécessaire
 
 -- Création du trigger 'after_retour_emprunt'
 
