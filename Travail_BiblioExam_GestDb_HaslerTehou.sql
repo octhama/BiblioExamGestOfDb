@@ -145,7 +145,7 @@ BEGIN
     FROM client c
     JOIN habite h ON c.id_client = h.id_client
     WHERE NOT EXISTS (
-        SELECT 1
+        SELECT *
         FROM habite h2
         WHERE h2.id_client = c.id_client
           AND h2.datemodif > h.datemodif
