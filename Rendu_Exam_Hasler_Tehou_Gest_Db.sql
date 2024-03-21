@@ -120,8 +120,16 @@ drop view commandes_en_cours;
 
 -- Resultat de la vue :
 /*biblio_exam=# select * from commandes_en_cours;
- bookcode | titre | nom | prenom | nb_exemplaire | date_commande
-----------+-------+-----+--------+---------------+---------------
+biblio_exam=# select * from commandes_en_cours;
+  bookcode  |                  titre                  |  nom  |  prenom  | nb_exemplaire | date_commande
+------------+-----------------------------------------+-------+----------+---------------+---------------
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_3 | Prenom_3 |             2 | 2024-03-18
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_2 | Prenom_2 |             2 | 2024-03-18
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_1 | Prenom_1 |             2 | 2024-03-18
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_3 | Prenom_3 |             2 | 2024-03-12
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_2 | Prenom_2 |             2 | 2024-03-12
+ IP21510312 | Java in Two Semesters: Featuring JavaFX | Nom_1 | Prenom_1 |             2 | 2024-03-12
+(6 rows)
 (0 rows)*/
 
 -- 4) Créer une procédure 'annulation_commande(id int)' qui annule une commande de livres_en_pret
